@@ -20,6 +20,7 @@
 
 .profile__description {
   margin: 0;
+  color: rgba(33, 33, 33, 0.7);
 }
 
 .profile__edit-btn {
@@ -32,7 +33,6 @@
   gap: 8px;
   padding: 0;
   margin: 107px 101px 0px 0px;
-  width: 107.34px;
   height: 16px;
   color: rgba(33, 33, 33, 0.7);
   opacity: 70%;
@@ -44,7 +44,6 @@
   flex-direction: row;
   gap: 8px;
   padding: 18px 30px;
-  width: 149px;
   height: 52px;
   border: none;
   background: #212121;
