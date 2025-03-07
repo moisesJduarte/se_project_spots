@@ -19,3 +19,19 @@
     gap: 0 20px;
   }
 }
+@media screen and (min-width: 880px) and (max-width: 1320px) {
+  .cards_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 16px; /* Espacio entre tarjetas */
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 880px) {
+  .cards_list {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    justify-content: center;
+    gap: 12px;
+  }
+}
