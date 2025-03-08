@@ -11,9 +11,7 @@ Spots is a responsive web project designed to ensure that all elements are displ
 - Improve workflow efficiency using Git and the terminal.
 - Optimize images for faster loading times.
 
-## 🎨 Figma
 
-All design specifications and layout guidelines can be found in the Figma project: 🔗 [Figma Project Link](#) (Replace with actual link)
 
 ## 🖼️ Images
 
@@ -47,7 +45,7 @@ In a professional setting, images are typically exported directly from Figma. We
 
 ## 🛠️ Key Features
 
-✅ Fully responsive design for various screen sizes. ✅ Modern layout inspired by **Figma** guidelines. ✅ Image optimization for improved performance. ✅ Clean and maintainable CSS structure.
+✅ Fully responsive design for various screen sizes. ✅ Modern layout inspired by Figma guidelines. ✅ Image optimization for improved performance. ✅ Clean and maintainable CSS structure.
 
 ## 📌 Responsive Breakpoints
 
