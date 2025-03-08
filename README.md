@@ -11,8 +11,6 @@ Spots is a responsive web project designed to ensure that all elements are displ
 - Improve workflow efficiency using Git and the terminal.
 - Optimize images for faster loading times.
 
-
-
 ## 🖼️ Images
 
 In a professional setting, images are typically exported directly from Figma. We recommend doing the same for this project to enhance your workflow experience.
@@ -28,6 +26,10 @@ In a professional setting, images are typically exported directly from Figma. We
 - HTML5 – Structuring the content.
 - CSS3 – Styling and making the site responsive.
 - Git & Terminal – Version control and efficient project management.
+
+## A video about the project in Google drive
+
+- https://drive.google.com/file/d/1Xpt2qw6X0Hd-aWaZ7hoMZGJ3587QnFO5/view?usp=sharing
 
 ## 🚀 How to Run the Project
 
@@ -49,9 +51,9 @@ In a professional setting, images are typically exported directly from Figma. We
 
 ## 📌 Responsive Breakpoints
 
-| Screen Size        | Layout Behavior                  |                     |
-| ------------------ | -------------------------------- | ------------------- |
-|                    | 1320px                      | Full desktop layout |
+| Screen Size    | Layout Behavior                  |                     |
+| -------------- | -------------------------------- | ------------------- |
+|                | 1320px                           | Full desktop layout |
 | 880px - 1320px | Two cards per row                |                     |
 | 630px - 880px  | One card per row                 |                     |
 | Below 630px    | Stacked layout for small screens |                     |
@@ -59,4 +61,3 @@ In a professional setting, images are typically exported directly from Figma. We
 ## 🎉 Good Luck & Have Fun!
 
 Happy coding! 🚀
-
