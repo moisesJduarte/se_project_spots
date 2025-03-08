@@ -13,7 +13,7 @@ Spots is a responsive web project designed to ensure that all elements are displ
 
 ## 🖼️ Images
 
-In a professional setting, images are typically exported directly from Figma. We recommend doing the same for this project to enhance your workflow experience.
+![sreenshot](./images/image.png)
 
 ### 🔹 Best Practices:
 
