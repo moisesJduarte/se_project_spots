@@ -27,6 +27,12 @@ Spots is a responsive web project designed to ensure that all elements are displ
 - CSS3 – Styling and making the site responsive.
 - Git & Terminal – Version control and efficient project management.
 
+## Deployment
+
+This webpage is deployed to GitHub Pages
+
+[Deployment Link](https://moisesjduarte.github.io/se_project_spots/)
+
 ## A video about the project in Google drive
 
 - https://drive.google.com/file/d/1Xpt2qw6X0Hd-aWaZ7hoMZGJ3587QnFO5/view?usp=sharing
