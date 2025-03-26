@@ -83,7 +83,7 @@
 .modal__input {
   padding: 16px 12px;
   border-radius: 8px;
-  opacity: 40%;
+  border-color: rgba(33, 33, 33, 0.4);
   color: #212121;
 }
 
