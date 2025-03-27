@@ -85,6 +85,9 @@
   border-radius: 8px;
   border-color: rgba(33, 33, 33, 0.4);
   color: #212121;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
 }
 
 @media screen and (max-width: 627px) {
@@ -106,8 +109,13 @@
   }
   .modal__label {
     margin-bottom: 24px;
+    font-size: 16px;
   }
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__input {
+    font-size: 16px;
   }
 }
