@@ -24,8 +24,7 @@
             <section class="profile page__section">
                 <img src="./images/spots-avatar-and-card-images/avatar.jpg" alt="avatar" class="profile__avatar">
                 <div class="profile__column">
-                    <h1 class="profile__name">Bessie Coleman
-                    </h1>
+                    <h1 class="profile__name">Bessie Coleman</h1>
                     <p class="profile__description">Civil Aviator</p>
                     <button type="button" class="profile__edit-btn">
                         <img src="./images/icons/pen-icon.svg" alt="pencil icon">Edit Profile
@@ -41,11 +40,14 @@
 
                     <template id="card-template">
                         <li class="card">
-                            <img src="" alt="" class="card__image">
-                            <div class="card__content">
-                                <h2 class="card__title"></h2>
-                                <button type="button" class="card__like-btn"></button>
-                            </div>
+                            <article class="card__content">
+                                <img src="" alt="" class="card__image">
+                                <div class="card__content">
+                                    <h2 class="card__title"></h2>
+                                    <button type="button" class="card__like-btn" aria-label="Like this card"></button>
+                                </div>
+                            </article>
+
                         </li>
                     </template>
 
@@ -61,17 +63,18 @@
 
         <div class="modal" id="edit-modal">
             <div class="modal__container">
-                <button type="submit" class="modal__close-btn"></button>
+                <button type="button" class="modal__close-btn"></button>
                 <h2 class="modal__title">Edit profile</h2>
                 <form name="edit-profile" class="modal__form">
                     <label for="profile-name-input" class="modal__label">
                         Name
-                        <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name">
+                        <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name"
+                            require>
                     </label>
                     <label for="profile-description-input" class="modal__label">
                         Description
                         <input id="profile-description-input" type="text" class="modal__input"
-                            placeholder="Describe yourself">
+                            placeholder="Describe yourself" require>
                     </label>
                     <button type="submit" class="modal__submit-btn">Save</button>
                 </form>
