@@ -29,6 +29,12 @@ function handleEditFormSubmit(evt) {
 
 }
 
+initialCards.forEach((cardData) => {
+    const cardElement = getCardElement(cardData);
+    cardsList.append(cardElement);
+});
+
+
 
 function getCardElement(data) {
     const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
