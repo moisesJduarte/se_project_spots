@@ -1,30 +1,29 @@
-const initialCards = [{
-    name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"
-},
-{
-    name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"
-},
-{
-    name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"
-},
-{
-    name: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"
-},
-{
-    name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-},
-{
-    name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
-}
-
+const initialCards = [
+    {
+        name: "Val Thorens",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"
+    },
+    {
+        name: "Restaurant terrace",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"
+    },
+    {
+        name: "An outdoor cafe",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"
+    },
+    {
+        name: "A very long bridge, over the forest and through the trees",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"
+    },
+    {
+        name: "Tunnel with morning light",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+    },
+    {
+        name: "Mountain house",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
+    }
 ];
-
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const profileName = document.querySelector(".profile__name");
@@ -39,31 +38,30 @@ const editModalDescriptionInput = editFormElement.elements["profile-description-
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
-function openModal() {
-    editModalNameInput.value = profileName.textContent;
-    editModalDescriptionInput.value = profileDescription.textContent;
-    editModal.classList.add("modal_opened");
+// Reusable modal functions
+function openModal(modal) {
+    modal.classList.add("modal_opened");
 }
 
-function closeModal() {
-    editModal.classList.remove("modal_opened");
+function closeModal(modal) {
+    modal.classList.remove("modal_opened");
 }
 
+// Form submit handler
 function handleEditFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = editModalNameInput.value;
     profileDescription.textContent = editModalDescriptionInput.value;
-    closeModal();
-
+    closeModal(editModal);
 }
 
+// Render cards
 initialCards.forEach((cardData) => {
     const cardElement = getCardElement(cardData);
     cardsList.append(cardElement);
 });
 
-
-
+// Create card element
 function getCardElement(data) {
     const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
     const cardNameEl = cardElement.querySelector(".card__title");
@@ -76,11 +74,18 @@ function getCardElement(data) {
     return cardElement;
 }
 
-profileEditButton.addEventListener("click", openModal);
-editModalCloseButton.addEventListener("click", closeModal);
+// Event listeners
+profileEditButton.addEventListener("click", () => {
+    editModalNameInput.value = profileName.textContent;
+    editModalDescriptionInput.value = profileDescription.textContent;
+    openModal(editModal);
+});
+
+editModalCloseButton.addEventListener("click", () => closeModal(editModal));
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
-initialCards.forEach(function (item) {
+// Debug: log card data
+initialCards.forEach((item) => {
     console.log(item.name);
     console.log(item.link);
-}) 
+});
