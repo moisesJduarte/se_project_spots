@@ -94,15 +94,15 @@ function getCardElement(data) {
     cardImage.alt = data.name;
 
     const cardLikeButton = cardElement.querySelector(".card__like-btn");
-
     cardLikeButton.addEventListener("click", () => {
         cardLikeButton.classList.toggle("card__like-btn_active");
     });
 
     const cardDeleteButton = cardElement.querySelector(".card__delete-btn");
     cardDeleteButton.addEventListener("click", () => {
-        cardDeleteButton.closest("card").remove();
+        cardElement.remove();
     });
+
 
 
     return cardElement;
@@ -132,6 +132,15 @@ editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 addCardButton.addEventListener("click", () => {
     newPostForm.reset();
     openModal(newPostModal);
+});
+
+document.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape") {
+        const openedModal = document.querySelector(".modal_opened");
+        if (openedModal) {
+            closeModal(openedModal);
+        }
+    }
 });
 
 // Close New Post modal
