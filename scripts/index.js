@@ -124,9 +124,6 @@ function getCardElement(data) {
         openModal(previewModal);
     });
 
-
-
-
     return cardElement;
 }
 
@@ -164,11 +161,10 @@ document.addEventListener("keydown", (evt) => {
         }
     }
 });
-
 // Close New Post modal
 newPostModalCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 
 // Submit New Post form
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
-
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
+

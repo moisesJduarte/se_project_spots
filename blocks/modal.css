@@ -6,7 +6,8 @@
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   visibility: hidden;
@@ -20,6 +21,8 @@
 
 .modal_opened {
   display: flex;
+  visibility: visible;
+  opacity: 1;
   visibility: visible;
 }
 
@@ -64,7 +67,7 @@
 
 .modal__close {
   background: #fff url(../images/icons/close-icon.svg) center/contain no-repeat;
-  opacity: 40%;
+  opacity: 0.4;
   border: none;
   background-color: #fff;
   position: absolute;
