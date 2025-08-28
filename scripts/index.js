@@ -37,6 +37,10 @@ const profileDescription = document.querySelector(".profile__description");
 // Modals
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const newPostModal = document.querySelector("#new-post-modal");
+const previewModal = document.querySelector("#preview-modal");
+
+
+
 
 // Forms
 const editProfileForm = document.forms["edit-profile-form"];
@@ -45,6 +49,11 @@ const newPostForm = document.forms["new-post-form"];
 // Close buttons
 const editProfileModalCloseBtn = editProfileModal.querySelector(".modal__close");
 const newPostModalCloseBtn = newPostModal.querySelector(".modal__close");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close");
+
+const previewImage = previewModal.querySelector(".modal__image");
+const previewCaption = previewModal.querySelector(".modal__caption");
+
 
 // Inputs
 const profileNameInput = editProfileForm.elements["profile-name-input"];
@@ -107,6 +116,15 @@ function getCardElement(data) {
         cardElement.remove();
     });
 
+    const cardImageClick = cardElement.querySelector(".card__image");
+    cardImageClick.addEventListener("click", () => {
+        previewImage.src = data.link;
+        previewImage.alt = data.name;
+        previewCaption.textContent = data.name;
+        openModal(previewModal);
+    });
+
+
 
 
     return cardElement;
@@ -152,3 +170,5 @@ newPostModalCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 
 // Submit New Post form
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
+
+previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
