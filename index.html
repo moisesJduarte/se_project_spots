@@ -60,7 +60,7 @@
         <!-- Edit profile modal -->
         <div class="modal" id="edit-profile-modal">
             <div class="modal__container">
-                <button type="button" class="modal__close-btn"></button>
+                <button type="button" class="modal__close"></button>
                 <h2 class="modal__title">Edit profile</h2>
                 <form id="edit-profile-form" name="edit-profile-form" class="modal__form">
                     <label for="profile-name-input" class="modal__label">
@@ -81,8 +81,8 @@
         <!-- New Post modal -->
         <div class="modal" id="new-post-modal">
             <div class="modal__container">
-                <button type="button" class="modal__close-btn"></button>
-                <h2 class="modal__title">New Post</h2>
+                <button type="button" class="modal__close"></button>
+                <h3 class="modal__title">New Post</h3>
                 <form id="new-post-form" name="new-post-form" class="modal__form">
                     <label for="card-title-input" class="modal__label">
                         Title
@@ -98,7 +98,21 @@
             </div>
         </div>
 
-        <script defer src="./scripts/index.js"></script>
+        <!-- preview Post modal -->
+
+        <div class="modal modal_type_preview " id="preview-modal">
+            <div class="modal__image-container">
+                <button type="button" class="modal__close modal__close_type_preview"></button>
+                <img src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+                    alt="" class="modal__image">
+                <p class="modal__caption">Golden Gate Bridge</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script defer src="./scripts/index.js"></script>
 </body>
 
-</html>
+</html>-*
