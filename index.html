@@ -66,12 +66,14 @@
                     <label for="profile-name-input" class="modal__label">
                         Name
                         <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name"
-                            required>
+                            required minlength="2" maxlength="40">
+                        <span class="modal__error">ERROR!!!</span>
                     </label>
                     <label for="profile-description-input" class="modal__label">
                         Description
                         <input id="profile-description-input" type="text" class="modal__input"
-                            placeholder="Describe yourself" required>
+                            placeholder="Describe yourself" minlength="2" maxlength="200" required>
+                        <span class="modal__error">ERROR!!!</span>
                     </label>
                     <button type="submit" class="modal__submit-btn">Save</button>
                 </form>
@@ -84,14 +86,15 @@
                 <button type="button" class="modal__close"></button>
                 <h3 class="modal__title">New Post</h3>
                 <form id="new-post-form" name="new-post-form" class="modal__form">
-                    <label for="card-title-input" class="modal__label">
-                        Title
-                        <input id="card-title-input" type="text" class="modal__input" placeholder="Post title" required>
-                    </label>
                     <label for="card-image-input" class="modal__label">
                         Image link
                         <input id="card-image-input" type="url" class="modal__input"
                             placeholder="Place a link to the picture" required>
+                    </label>
+                    <label for="card-caption-input" class="modal__label">
+                        Caption
+                        <input id="card-caption-input" type="text" class="modal__input" placeholder="type your caption"
+                            minlength="2" maxlength="30" required>
                     </label>
                     <button type="submit" class="modal__submit-btn">Save</button>
                 </form>
