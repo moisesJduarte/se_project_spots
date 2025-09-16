@@ -144,3 +144,4 @@ newPostModalCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
+console.log(initialCards);
