@@ -49,16 +49,18 @@ const previewCaption = previewModal.querySelector(".modal__caption");
 
 const profileNameInput = editProfileForm.elements["profile-name-input"];
 const profileDescriptionInput = editProfileForm.elements["profile-description-input"];
-const cardTitleInput = newPostForm.elements["card-title-input"];
+const cardCaptionInput = newPostForm.elements["card-caption-input"];
 const cardImageInput = newPostForm.elements["card-image-input"];
 
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
+const cardSubmitBtn = newPostForm.querySelector(".modal__submit-btn");
 
 const addCardButton = document.querySelector(".profile__add-btn");
 
 function openModal(modal) {
     modal.classList.add("modal_opened");
+
 }
 
 function closeModal(modal) {
@@ -75,11 +77,12 @@ function handleProfileFormSubmit(evt) {
 function handleNewPostFormSubmit(evt) {
     evt.preventDefault();
     const newCard = getCardElement({
-        name: cardTitleInput.value,
+        name: cardCaptionInput.value,
         link: cardImageInput.value,
     });
     cardsList.prepend(newCard);
     closeModal(newPostModal);
+    disableButton(cardSubmitBtn);
     newPostForm.reset();
 }
 
@@ -120,6 +123,7 @@ initialCards.forEach((item) => {
 profileEditButton.addEventListener("click", () => {
     profileNameInput.value = profileName.textContent;
     profileDescriptionInput.value = profileDescription.textContent;
+    resetValidation(editProfileForm, [profileNameInput, profileDescriptionInput]);
     openModal(editProfileModal);
 });
 
@@ -129,6 +133,9 @@ editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 
 addCardButton.addEventListener("click", () => {
     newPostForm.reset();
+    const submitBtn = newPostForm.querySelector(".modal__submit-btn");
+    disableButton(submitBtn);
+    submitBtn.classList.add("modal__submit-btn_disabled");
     openModal(newPostModal);
 });
 
@@ -144,4 +151,3 @@ newPostModalCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
-console.log(initialCards);
