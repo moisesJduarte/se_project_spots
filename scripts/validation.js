@@ -64,8 +64,8 @@ const resetValidation = (formEl, inputList) => {
 
 
 
-const setEventListeners = (formEl) => {
-    const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
+const setEventListeners = (formEl, config) => {
+    const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
     const buttonElement = formEl.querySelector(".modal__submit-btn");
 
     toggleButtonState(inputList, buttonElement);
@@ -78,14 +78,14 @@ const setEventListeners = (formEl) => {
     });
 };
 
-const enableValidation = () => {
-    const formList = Array.from(document.querySelectorAll(".modal__form"));
+const enableValidation = (config) => {
+    const formList = document.querySelectorAll(config.formSelector);
     formList.forEach((formEl) => {
-        setEventListeners(formEl);
+        setEventListeners(formEl, config);
     });
 
 
 }
 
-enableValidation();
+enableValidation(settings);
 
