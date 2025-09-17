@@ -62,7 +62,7 @@
             <div class="modal__container">
                 <button type="button" class="modal__close"></button>
                 <h2 class="modal__title">Edit profile</h2>
-                <form id="edit-profile-form" name="edit-profile-form" class="modal__form">
+                <form id="edit-profile-form" name="edit-profile-form" class="modal__form" novalidate>
                     <label for="profile-name-input" class="modal__label">
                         Name
                         <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name"
@@ -75,7 +75,7 @@
                             placeholder="Describe yourself" minlength="2" maxlength="200" required>
                         <span class="profile-description-input-error modal__error"></span>
                     </label>
-                    <button type="submit" class="modal__button">Save</button>
+                    <button type="submit" class="modal__submit-btn">Save</button>
                 </form>
             </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="modal__container">
                 <button type="button" class="modal__close"></button>
                 <h3 class="modal__title">New Post</h3>
-                <form id="new-post-form" name="new-post-form" class="modal__form">
+                <form id="new-post-form" name="new-post-form" class="modal__form" novalidate>
                     <label for="card-image-input" class="modal__label">
                         Image link
                         <input id="card-image-input" type="url" class="modal__input"
@@ -98,7 +98,7 @@
                             minlength="2" maxlength="30" required>
                         <span class="card-caption-input-error modal__error"></span>
                     </label>
-                    <button type="submit" class="modal__button">Save</button>
+                    <button type="submit" class="modal__submit-btn">Save</button>
                 </form>
             </div>
         </div>
