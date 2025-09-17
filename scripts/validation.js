@@ -1,3 +1,25 @@
+const showInputError = (formEl, inputEl, errorMsg) => {
+    const errorMsgEl = formEl.querySelector(`.${inputEl.id}-error`);
+    inputEl.classList.add("modal__input_type_error");
+    errorMsgEl.textContent = errorMsg;
+
+};
+
+
+const hideInputError = (formEl, inputEl, errorMsg) => {
+    const errorMsgEl = formEl.querySelector(`.${inputEl.id}-error`);
+    errorMsgEl.textContent = errorMsg;
+};
+
+
+const checkInputValidity = (formEl, inputEl) => {
+    if (!inputEl.validity.valid) {
+        showInputError(formEl, inputEl, inputEl.validationMessage);
+    } else {
+        hideInputError(formEl, inputEl);
+    }
+}
+
 const setEventListeners = (formEl) => {
     const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
     const buttonElement = formEl.querySelector(".modal__button");
@@ -10,7 +32,7 @@ const setEventListeners = (formEl) => {
     inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {
             checkInputValidity(formEl, inputElement);
-            toggleButtonState(inputList, buttonElement);
+            // toggleButtonState(inputList, buttonElement);
         });
     });
 };
