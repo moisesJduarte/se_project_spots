@@ -130,9 +130,7 @@
 }
 
 .modal__submit-btn.modal__submit-btn_disabled {
-  background-color: grey;
-  cursor: not-allowed;
-  opacity: 0.6;
+  background-color: rgba(33, 33, 33, 0.5);
 }
 
 .modal__submit-btn:hover {
