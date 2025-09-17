@@ -82,7 +82,7 @@ function handleNewPostFormSubmit(evt) {
     });
     cardsList.prepend(newCard);
     closeModal(newPostModal);
-    disableButton(cardSubmitBtn);
+    disableButton(cardSubmitBtn, settings);
     newPostForm.reset();
 }
 
