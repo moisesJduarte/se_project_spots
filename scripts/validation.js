@@ -21,7 +21,7 @@ const showInputError = (formEl, inputEl, errorMsg, config) => {
 
 const hideInputError = (formEl, inputEl, config) => {
     const errorMsgEl = formEl.querySelector(`.${inputEl.id}-error`);
-    errorMsgEl.textContent = '';
+    errorMsgEl.textContent = "";
     inputEl.classList.remove(config.inputErrorClass);
 };
 
@@ -57,7 +57,7 @@ const disableButton = (buttonEl, config) => {
 
 const resetValidation = (formEl, inputList) => {
     inputList.forEach((input) => {
-        hideInputError(formEl, input);
+        hideInputError(formEl, input, settings);
     })
 
 }

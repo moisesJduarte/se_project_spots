@@ -134,7 +134,7 @@ editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 addCardButton.addEventListener("click", () => {
     newPostForm.reset();
     const submitBtn = newPostForm.querySelector(".modal__submit-btn");
-    disableButton(submitBtn);
+    disableButton(submitBtn, settings);
     submitBtn.classList.add("modal__submit-btn_disabled");
     openModal(newPostModal);
 });
