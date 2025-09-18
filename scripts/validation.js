@@ -13,7 +13,7 @@ const settings = {
 
 const showInputError = (formEl, inputEl, errorMsg, config) => {
     const errorMsgEl = formEl.querySelector(`.${inputEl.id}-error`);
-    inputEl.classList.add(config.inputErrorClass);
+    inputEl.classList.add(config.ErrorClass);
     errorMsgEl.textContent = errorMsg;
 
 };
