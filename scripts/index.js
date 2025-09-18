@@ -60,11 +60,20 @@ const addCardButton = document.querySelector(".profile__add-btn");
 
 function openModal(modal) {
     modal.classList.add("modal_opened");
+    modal.addEventListener("mousedown", handleOverlayClick);
+    document.addEventListener("keydown", handleEscape);
+}
 
+function handleOverlayClick(evt) {
+    if (evt.target.classList.contains("modal_opened")) {
+        closeModal(evt.target);
+    }
 }
 
 function closeModal(modal) {
     modal.classList.remove("modal_opened");
+    modal.removeEventListener("mousedown", handleOverlayClick);
+    document.removeEventListener("keydown", handleEscape);
 }
 
 function handleProfileFormSubmit(evt) {
@@ -132,21 +141,20 @@ editProfileModalCloseBtn.addEventListener("click", () => closeModal(editProfileM
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 
 addCardButton.addEventListener("click", () => {
-    newPostForm.reset();
     const submitBtn = newPostForm.querySelector(".modal__submit-btn");
     disableButton(submitBtn, settings);
     submitBtn.classList.add("modal__submit-btn_disabled");
     openModal(newPostModal);
 });
 
-document.addEventListener("keydown", (evt) => {
+function handleEscape(evt) {
     if (evt.key === "Escape") {
         const openedModal = document.querySelector(".modal_opened");
         if (openedModal) {
             closeModal(openedModal);
         }
     }
-});
+}
 newPostModalCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
